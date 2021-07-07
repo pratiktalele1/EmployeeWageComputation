@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Employee {
@@ -9,6 +10,21 @@ public class Employee {
 	double partTimeEmployeeWage;
 	double workingDays;
 	double dailyWage;
+	double totalMonthWorkingHour;
+	
+	public void WagesForWorkingHourAndDays(){
+		
+		double totalWagesForDays = 0;
+		double hourPerDay=totalMonthWorkingHour/workingDays;
+		double WagesForDay=hourPerDay*wagePerHour;
+		
+		for(int i=0;i<20;i++) {
+			totalWagesForDays=totalWagesForDays+WagesForDay;
+		}
+		System.out.println("total consume money for 100 hours or 20 days is - "+totalWagesForDays+" RS");
+		
+	}
+	
 	public void DailyEmployeeWage() {
 		dailyWage=wagePerHour*fullDayHour;
 		System.out.println("employee wage "+dailyWage +" RS");
@@ -58,13 +74,15 @@ public class Employee {
 	}
 	 
 	
-	public Employee(double randomNumber,double wagePerHour,double fullDayHour,double partTimeHour,double workingDays) {
+	public Employee(double randomNumber,double wagePerHour,double fullDayHour,double partTimeHour,double workingDays, double totalMonthWorkingHour) {
 		super();
 		this.randomNumber = randomNumber;
 		this.wagePerHour=wagePerHour;
 		this.fullDayHour=fullDayHour;
 		this.partTimeHour=partTimeHour;
 		this.workingDays=workingDays;
+		this.totalMonthWorkingHour=totalMonthWorkingHour;
+		
 	}
 	
 	public void attendance() {
