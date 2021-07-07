@@ -5,10 +5,12 @@ public class EmployeeWage {
 		double fullDayHour=8;
 		double partTimeHour=8;
 		double randomNumber = Math.floor(Math.random()*10)%2; 
-		Employee checkAttendance=new Employee(randomNumber,wagePerHour,fullDayHour,partTimeHour);
+		double workingDays=20;
+		Employee checkAttendance=new Employee(randomNumber,wagePerHour,fullDayHour,partTimeHour,workingDays);
 		checkAttendance.attendance();
 		checkAttendance.DailyEmployeeWage();
         checkAttendance.partTimeEmployeeWage();
 		checkAttendance.employeeWageUsingSwitch();
+		checkAttendance.WagesForMonth();
 	}
 }

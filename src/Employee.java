@@ -7,9 +7,10 @@ public class Employee {
 	double fullDayHour;
 	double partTimeHour;
 	double partTimeEmployeeWage;
-	
+	double workingDays;
+	double dailyWage;
 	public void DailyEmployeeWage() {
-		double dailyWage=wagePerHour*fullDayHour;
+		dailyWage=wagePerHour*fullDayHour;
 		System.out.println("employee wage "+dailyWage +" RS");
 	}
 	
@@ -17,6 +18,14 @@ public class Employee {
 		double partTimeEmployeeWage=wagePerHour*partTimeHour;
 		System.out.println("Part time employee wage "+ partTimeEmployeeWage +" RS");
 		System.out.println("-----------------------------------------------------");
+	}
+	
+	public void WagesForMonth() {
+		double totalWageForMonth=workingDays*dailyWage;
+		System.out.println("total wages for month - "+totalWageForMonth+" RS");
+		System.out.println("-----------------------------------------------------");
+
+		
 	}
 	
 	public void employeeWageUsingSwitch() {
@@ -49,12 +58,13 @@ public class Employee {
 	}
 	 
 	
-	public Employee(double randomNumber,double wagePerHour,double fullDayHour,double partTimeHour) {
+	public Employee(double randomNumber,double wagePerHour,double fullDayHour,double partTimeHour,double workingDays) {
 		super();
 		this.randomNumber = randomNumber;
 		this.wagePerHour=wagePerHour;
 		this.fullDayHour=fullDayHour;
 		this.partTimeHour=partTimeHour;
+		this.workingDays=workingDays;
 	}
 	
 	public void attendance() {
