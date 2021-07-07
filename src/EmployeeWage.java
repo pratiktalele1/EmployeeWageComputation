@@ -9,6 +9,6 @@ public class EmployeeWage {
 		checkAttendance.attendance();
 		checkAttendance.DailyEmployeeWage();
         checkAttendance.partTimeEmployeeWage();
-		
+		checkAttendance.employeeWageUsingSwitch();
 	}
 }

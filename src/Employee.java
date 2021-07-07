@@ -16,8 +16,37 @@ public class Employee {
 	public void partTimeEmployeeWage() {
 		double partTimeEmployeeWage=wagePerHour*partTimeHour;
 		System.out.println("Part time employee wage "+ partTimeEmployeeWage +" RS");
+		System.out.println("-----------------------------------------------------");
 	}
 	
+	public void employeeWageUsingSwitch() {
+		System.out.println("option 1 for employee Daily Wage");
+		System.out.println("option 2 for employee Part time Wage");
+		System.out.println("enter - ");
+		
+		Scanner getValue = new Scanner(System.in);
+		int selectOption = getValue.nextInt();
+		
+		switch (selectOption) {
+		case 1: {
+			System.out.println("-----------------------------------------------------");
+			double partTimeEmployeeWage=wagePerHour*partTimeHour;
+			System.out.println(" employee Daily wage "+ partTimeEmployeeWage +" RS");
+			System.out.println("-----------------------------------------------------");
+			break;
+		}
+		case 2: {
+			System.out.println("-----------------------------------------------------");
+
+			double partTimeEmployeeWage=wagePerHour*partTimeHour;
+			System.out.println("Part time employee wage "+ partTimeEmployeeWage +" RS");
+			System.out.println("-----------------------------------------------------");
+			break;
+		}
+		default:
+			System.out.println("wrong option");
+		}
+	}
 	 
 	
 	public Employee(double randomNumber,double wagePerHour,double fullDayHour,double partTimeHour) {
